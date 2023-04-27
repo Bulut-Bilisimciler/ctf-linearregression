@@ -8,7 +8,7 @@ import requests
 import subprocess
 
 
-def verifyScore():
+def main():
 
     # Search for Pickle extensioned files in the home directory
     for file_name in os.listdir("/home"):
@@ -56,4 +56,5 @@ def verifyScore():
         subprocess.call(['echo', '1'])
         return 1
 
-result = verifyScore()
+if __name__ == "__main__":
+    main()
