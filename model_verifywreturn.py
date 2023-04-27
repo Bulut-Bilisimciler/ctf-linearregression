@@ -5,8 +5,7 @@ import numpy as np
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score, accuracy_score
 import json
 import requests
-
-    
+import subprocess    
 
 def verifyScore():
 
@@ -54,11 +53,12 @@ def verifyScore():
 
 
     if (accuracy>0.3):
+        subprocess.call(['echo', '0'])
         return 0
     else:
+        subprocess.call(['echo', '1'])
         return 1
     
 result = verifyScore()
-print(result)
 
 
