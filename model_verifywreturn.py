@@ -12,6 +12,7 @@ def verifyScore():
 
 # Linux Home directory ayarı
     home_dir = os.path.expanduser("~")
+    accuracy = 0 
 
     # Search for Pickle extensioned files in the home directory
     for file_name in os.listdir(home_dir):
@@ -57,6 +58,7 @@ def verifyScore():
     else:
         return 1
     
-verifyScore()
+result = verifyScore()
+print(result)
 
 
