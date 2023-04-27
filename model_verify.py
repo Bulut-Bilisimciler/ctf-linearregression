@@ -50,10 +50,8 @@ def main():
             print("Model evaluation complete.")
 
     if (r2>0.5):
-        subprocess.call(['echo', '0'])
         return 0
-    else:
-        subprocess.call(['echo', '1'])
+    else:        
         return 1
 
 if __name__ == "__main__":
